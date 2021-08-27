@@ -1,0 +1,50 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:rgba(233, 233, 233, 0.781)">
+    <div class="header" style="background-image: url('https://media.giphy.com/media/UKm1AF0UrCkb6/giphy.gif')">
+        <div class="op">
+
+
+            <h1>CARS</h1>
+            <p>Get your perfect car price here</p>
+
+        </div>
+    </div>
+    <div class="input-section">
+        <div>
+            <p>Enter following values</p>
+
+            <form action="/predictcar" method="post">
+
+                <div class="divide">
+
+                    <p>Year</p><input type="text" name="engingbrgesize" placeholder="ex:2015" required="required" />
+                    <br>
+                    <p>Present Price</p><input type="text" name="cyligrgnder" placeholder="ex:5.09(in lakhs)" required="required" />
+                    <br>
+                    <p>Kms Driven</p><input type="text" name="fuegrl" placeholder="ex:27000" required="required" />
+                    <br>
+                    <p>Fuel Type</p><input type="text" name="engiyrynesize" placeholder="ex:Petrol->0 | Diesel->1 | CNG->2" required="required" />
+                </div>
+                <div class="divide">
+
+                    <p>Seller Type</p><input type="text" name="cyluytinder" placeholder="ex:Dealer->0 | Individual->1" required="required" />
+                    <br>
+                    <p>Transmission</p><input type="text" name="fueggl" placeholder="ex:Manual->0 | Automatic->1" required="required" />
+                    <br>
+                    <p>Owner</p><input type="text" name="fuegl" placeholder="ex:Mine->0 | Others->1" required="required" /></div>
+
+
+                <button type="submit" class="btn">PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+    </div>
+     <div class="input-section">
+        <p>{{ prediction_text }}</p>
+         <p>Have a great Day</p>
+    </div>
+</div>
+{%endblock%}
