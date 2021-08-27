@@ -1,0 +1,52 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:rgba(233, 233, 233, 0.781)">
+    <div class="header" style="background-image: url('https://media.giphy.com/media/asNnMpogiLpa8/giphy.gif')">
+        <div class="op">
+
+
+            <h1>DIABETES </h1>
+            <p>This is very serious medical issue which people can't resist</p>
+
+        </div>
+    </div>
+    <div class="input-section">
+        <div>
+            <p>Enter following values</p>
+
+            <form action="/predictdiabetes" method="post">
+                <div class="divide">
+                    <p>Pregnancies</p><input type="text" name="enginesize" placeholder="ex:1" required="required" />
+                    <br>
+                    <p>Glucose</p><input type="text" name="cylinder" placeholder="ex:89" required="required" />
+                    <br>
+                   <p>Blood Pressure</p> <input type="text" name="fuel" placeholder="ex:66" required="required" />
+                    <br>
+                    <p>Skin Thickness</p> <input type="text" name="fuelDW" placeholder="ex:29" required="required" />
+                    <br>
+                </div>
+                <div class="divide">
+                    <p>Insulin</p><input type="text" name="enginesieeze" placeholder="ex:83" required="required" />
+                    <br>
+                    <p>BMI</p><input type="text" name="cylinderwdw" placeholder="ex:26.7" required="required" />
+                    <br>
+                    <p>Diabetes Pedigree Function</p><input type="text" name="fuelw1" placeholder="ex:0.351" required="required" />
+                    <br>
+                    <p>Age</p><input type="text" name="cylinSDWQderwdw" placeholder="ex:40" required="required" />
+                    <br>
+                    </div>
+
+
+                <button type="submit" class="btn">PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+    </div>
+    <div class="input-section">
+        <p>{{ prediction_text }}</p>
+        <p>Have a great Day</p>
+    </div>
+</div>
+{%endblock%}
