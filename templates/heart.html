@@ -1,0 +1,59 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:rgba(233, 233, 233, 0.781)">
+    <div class="header" style="background-image: url('https://thebiotechnologist.ca/wp-content/uploads/2019/10/GIF-1.gif')">
+        <div class="op">
+
+
+            <h1>HEART DISEASE</h1>
+            <p>This is very serious medical issue which people can't resist</p>
+
+        </div>
+    </div>
+    <div class="input-section">
+        <div>
+            <p>Enter following values</p>
+
+            <form action="/predictheart" method="post">
+                <div class="divide">
+                    <p>Age</p><input type="text" name="enginesize" placeholder="..." required="required" />
+                    <br>
+                     <p>Sex</p><input type="text" name="cylinder" placeholder="..." required="required" />
+                    <br>
+                     <p>Constrictive pericarditis</p><input type="text" name="fuel" placeholder="" required="required" />
+                    <br>
+
+                <p>Resting Blood Pressure(trestbps)</p><input type="text" name="enginze" placeholder="" required="required" />
+                    <br>
+                     <p>Cholesterol</p><input type="text" name="cylier" placeholder="" required="required" />
+                    <br>
+                     <p>fasting blood sugar</p><input type="text" name="fl" placeholder="" required="required" />
+                    <br></div>
+                <div class="divide">
+                   <p> Resting Electrocardiographic Results(restecg)</p> <input type="text" name="ennesize" placeholder="" required="required" />
+                    <br>
+                    <p>Thalach</p><input type="text" name="cynder" placeholder="" required="required" />
+                    <br>
+                    <p> Exercise Induced Angina(exang)</p><input type="text" name="fue" placeholder="" required="required" />
+                    <br>
+               <p>Exercise Relative to Rest(oldpeak)</p><input type="text" name="einesize" placeholder="" required="required" />
+                    <br>
+                   <p>Slope</p> <input type="text" name="clinder" placeholder="" required="required" />
+                    <br>
+                   <p>Calcium</p> <input type="text" name="fel" placeholder="" required="required" />
+                    <br> <p>Thalassemia</p><input type="text" name="feyyl" placeholder="" required="required" /></div>
+
+
+                <button type="submit" class="btn">PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+    </div>
+     <div class="input-section">
+        <p>{{ prediction_text }}</p>
+         <p>Have a great Day</p>
+    </div>
+</div>
+{%endblock%}
