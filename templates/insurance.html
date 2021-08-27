@@ -1,0 +1,48 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:rgba(233, 233, 233, 0.781)">
+    <div class="header" style="background-image: url('https://media.giphy.com/media/d7HWDCV6t72iRm9vPh/giphy.gif')">
+        <div class="op">
+
+
+            <h1>Insurance</h1>
+            <p>Your Health is the first Priority </p>
+
+        </div>
+    </div>
+    <div class="input-section">
+        <div>
+            <p>Enter following values</p>
+
+            <form action="/predictinsurance" method="post">
+                <div class="divide">
+                    <p>Age</p><input type="text" name="enginesize" placeholder="ex:30" required="required" />
+                    <br>
+                    <p>Sex</p><input type="text" name="cylinder" placeholder="ex:male->0 | female->1" required="required" />
+                    <br>
+                   <p>BMI</p> <input type="text" name="fuel" placeholder="ex:27.9" required="required" />
+                    <br>
+                </div>
+                <div class="divide"> <p>Children</p><input type="text" name="engincsesize" placeholder="ex:2" required="required" />
+                    <br>
+                    <p>Smoker</p><input type="text" name="cycslinder" placeholder="ex:yes->0 | no->1" required="required" />
+                    <br>
+                    <p>Region</p><input type="text" name="fcscuel" placeholder="ex:southeast->0 | southwest->1 | northeast-> 2 | northwest->3" required="required" />
+                    <br></div>
+
+
+                <button type="submit" class="btn">PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+    </div>
+    <div class="input-section">
+
+        <p>{{ prediction_text }}</p>
+        <p>Have a great Day</p>
+
+    </div>
+</div>
+{%endblock%}
