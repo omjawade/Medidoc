@@ -1,0 +1,31 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:#050505">
+<div class="header" style="background-image: url('{{ url_for('static',filename='img/dataimg.gif')}}')">
+    <div class="header-div">
+        <div class="header-h">
+
+            <h1>MACHINE LEARNING</h1>
+        </div>
+        <p> Here We PREDICT Your future</p>
+
+    </div>
+</div>
+<div class="field">
+
+    {% for f in field %}
+    <div class="field-preview">
+
+        <a href="/{{f.slug}}">
+            <h2 class="field-title">{{f.title}}</h2>
+        </a>
+ </div>
+
+    <div class="field-content ">
+        <p>{{f.content}}</p>
+    </div>
+
+<hr>
+    {% endfor %}
+</div>
+</div>
+{%endblock %}
