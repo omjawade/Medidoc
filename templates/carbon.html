@@ -1,0 +1,41 @@
+{% extends "layout.html"%} {% block body %}
+<div style="background-color:rgba(233, 233, 233, 0.781)">
+    <div class="header" style="background-image: url('https://media.giphy.com/media/3oKIPllXEiSblIM1j2/giphy.gif">
+        <div class="op">
+
+
+            <h1>CO2 Emission</h1>
+            <p>This is very serious issue which people can't avoid</p>
+
+        </div>
+    </div>
+    <div class="input-section">
+        <div>
+            <p>Enter following values</p>
+
+            <form action="/predictcarbon" method="post">
+                <div class="">
+                    <p>Engine size</p><input type="text" name="enginesize" placeholder="ex:2" required="required" />
+                    <br>
+                    <p>Cylinder</p><input type="text" name="cylinder" placeholder="ex:4" required="required" />
+                    <br>
+                   <p>Fuel Consumption</p> <input type="text" name="fuel" placeholder="ex:7.7" required="required" />
+                    <br>
+                </div>
+
+
+
+                <button type="submit" class="btn">PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+    </div>
+    <div class="input-section">
+        <p>{{ prediction_text }}</p>
+        <p>Have a great Day</p>
+    </div>
+</div>
+{%endblock%}
