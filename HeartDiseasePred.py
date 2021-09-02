@@ -4,7 +4,7 @@ import pickle
 from sklearn.linear_model import LogisticRegression
 df = pd.read_csv("data/heart.csv")
 
-#Training Data and Predictor Variable
+ #Training Data and Predictor Variable
 # Use all data for training (tarin-test-split not used)
 x = df.iloc[:, :-1]
 y = df.iloc[:, -1]
